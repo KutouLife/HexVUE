@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>index-Mission2</title>
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Roboto&display=swap"
+		/>
+		<!-- Bootstrap5.css -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+			integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="/src/style.css" />
+		<!-- end of styles.CSS -->
+	</head>
+
+	<body>
+		<section id="app">
+			<section id="login-card">
+				<h1 v-show="hintMsg">{{ hintMsg }}</h1>
+
+				<form class="login-form" id="loginApp" @submit.prevent="login">
+					<!-- 
+							#NOTE:
+							https://staging.vuejs.org/guide/essentials/event-handling.html#event-modifiers 
+						-->
+					<div class="email">
+						<label for="inputEmail"></label>
+						<input
+							type="email"
+							name="username"
+							id="inputEmail"
+							v-model.lazy="user.username"
+							v-model.trim="user.username"
+							placeholder="example@test.com"
+							required
+							autofocus
+						/>
+						<!-- 
+								#NOTE:
+								https://book.vue.tw/CH1/1-4-directive.html
+								v-model.trim="user.username"
+								v-model.lazy="user.username"
+							-->
+					</div>
+					<div class="password">
+						<label for="inputPassword"></label>
+						<input
+							type="password"
+							name="password"
+							id="inputPassword"
+							v-model.lazy="user.password"
+							v-model.trim="user.password"
+							placeholder="******"
+							required
+						/>
+					</div>
+					<button type="submit" class="btn login-btn btn-success">Login</button>
+				</form>
+				<!-- end of login-form -->
+			</section>
+			<!-- end of container -->
+		</section>
+		<!-- end of DOM -->
+
+		<!-- axios.js -->
+
+		<!-- Bootstrap5.js -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+			integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!--  
+				Message-vue@3:
+				You are running a development build of Vue.
+				Make sure to use the production build (*.prod.js) when deploying for production. 
+		  -->
+		<!-- 
+				<script src="https://unpkg.com/vue@3"
+						integrity="sha384-wF/ixqQ9lhCfSnbALWTBjzGJTDkdSQfae2zFlZkri33I/tyUtSKJuVCklc+iCCiJ"
+						crossorigin="anonymous">
+				</script> 
+		  -->
+
+		<!-- Main -->
+		<script type="module" src="/src/scripts/main.js"></script>
+		<!-- end of script.js -->
+
+		<!-- 
+			Layout-credit
+			https://codepen.io/nedev/pen/EVaGqW
+			-->
+	</body>
+</html>

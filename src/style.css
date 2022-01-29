@@ -1,0 +1,107 @@
+* {
+	font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+}
+
+html,
+body {
+	background: #212534;
+	background-size: cover;
+	overflow: hidden;
+	-webkit-text-size-adjust: auto;
+}
+
+/* end of Global */
+
+#login-card {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0.7rem;
+	width: 65vh;
+	height: 75vh;
+	text-align: center;
+	border-radius: 5px;
+	background: rgba(3, 3, 3, 0.25);
+	box-shadow: 1px 1px 50px #000;
+}
+
+#login-card h1 {
+	position: relative;
+	text-align: center;
+	color: #ddd;
+	text-shadow: 3px 3px 10px #000;
+}
+
+.login-form {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 65vh;
+	height: 50vh;
+	/* display: none; */
+}
+
+.login-form div {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+input {
+	text-decoration: none;
+	position: relative;
+	width: 80%;
+	display: block;
+	margin: 9px auto;
+	font-weight: 700;
+	color: #fff;
+	padding: 8px;
+	border-radius: 6px;
+	border: none;
+	background: rgba(3, 3, 3, 0.1);
+	-webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	-o-transition: all 2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: 3px 3px 10px #333;
+	background: rgba(3, 3, 3, 0.18);
+}
+
+::-webkit-input-placeholder {
+	color: #c64;
+}
+
+::-moz-placeholder {
+	color: #f40;
+}
+
+.login-btn {
+	position: relative;
+	width: 80%;
+	margin: 1rem;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 5px 10px 70px #fff;
+	/* color: #fff; */
+	font-weight: 900;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+/* end of login-card */
